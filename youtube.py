@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import os
 import requests
 def main():
-
-  r = requests.get("http://web.stanford.edu/class/cs106b/lecture-videos.shtml")
+  url = raw_input("enter the page url\n")
+  r = requests.get(url)
   data = r.text
   soup = BeautifulSoup(data)
 
